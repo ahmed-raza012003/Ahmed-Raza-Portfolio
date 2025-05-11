@@ -248,7 +248,7 @@ const testimonials = [
     name: "Mahmood Ahmad",
     designation: "Founder",
     company: "Trektoo",
-    image: firstTestimonial,
+    
   },
   {
     testimonial:
@@ -256,7 +256,7 @@ const testimonials = [
     name: "Suleman Abrar",
     designation: "App Developer",
     company: "LaundryDay",
-    image: secondTestimonial,
+    
   },
   {
     testimonial:
@@ -264,7 +264,7 @@ const testimonials = [
     name: "Hamza Tariq",
     designation: "Freelance Client",
     company: "Self-Employed",
-    image: thirdTestimonial,
+    
   },
 ];
 
