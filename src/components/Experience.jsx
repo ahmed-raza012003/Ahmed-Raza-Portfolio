@@ -63,6 +63,13 @@ const ExperienceCard = ({ experience }) => {
 };
 
 const Experience = () => {
+  const fullTimeExperiences = experiences.filter(
+    (exp) => exp.type === "full-time"
+  );
+  const remoteExperiences = experiences.filter(
+    (exp) => exp.type === "remote"
+  );
+
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -70,15 +77,32 @@ const Experience = () => {
           What I have done so far
         </p>
         <h2 className={`${styles.sectionHeadText} text-center`}>
-          Work Experience.
+          Experiences.
         </h2>
       </motion.div>
 
       <div className='mt-20 flex flex-col'>
+        <h3 className='text-white text-[30px] font-bold text-center mb-10'>
+          Full-Time Roles
+        </h3>
         <VerticalTimeline>
-          {experiences.map((experience, index) => (
+          {fullTimeExperiences.map((experience, index) => (
             <ExperienceCard
-              key={`experience-${index}`}
+              key={`full-time-experience-${index}`}
+              experience={experience}
+            />
+          ))}
+        </VerticalTimeline>
+      </div>
+
+      <div className='mt-20 flex flex-col'>
+        <h3 className='text-white text-[30px] font-bold text-center mb-10'>
+          Remote & Part-Time Projects
+        </h3>
+        <VerticalTimeline>
+          {remoteExperiences.map((experience, index) => (
+            <ExperienceCard
+              key={`remote-experience-${index}`}
               experience={experience}
             />
           ))}

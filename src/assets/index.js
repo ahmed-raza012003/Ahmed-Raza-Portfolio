@@ -46,7 +46,8 @@ import php from './php.png';
 import nextjs from './nextjs.png';
 import python from './python.png';
 import casewiselogo from './casewiselogo.jfif';
-
+import trektooProject from "./Trektoo.png";
+import webIcon from "./web.png";
 
 
 export {
@@ -97,5 +98,7 @@ export {
  hrm,
   threejs,
 laundry,
-  itworkcenter
+  itworkcenter,
+  trektooProject,
+  webIcon
 };

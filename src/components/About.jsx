@@ -69,32 +69,29 @@ const About = () => {
       <div ref={headingRef}>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
-        
+
       </div>
 
-   <p ref={paragraphRef} className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
-  I’m a full-stack developer with expertise in Laravel, PHP, and modern web technologies. I work on building 
-  dynamic, scalable, and user-centric applications. I am also learning Python to expand my skills further. My focus 
-  is on crafting efficient backend systems and seamless user experiences. Let’s collaborate to turn your ideas into impactful solutions!
-</p>
+      <p ref={paragraphRef} className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
+        I design and lead the development of scalable web and mobile products, combining deep expertise in Laravel, PHP, and modern technologies. With hands-on experience across system architecture, team leadership, and full-stack development, I focus on building high-performance, user-centric solutions that solve real business problems.</p>
 
-   <div className="mt-8">
-          <a
-            href={`https://wa.me/+923048237137`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-green-500 py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
-          >
-Ping Me on WhatsApp
+      <div className="mt-8">
+        <a
+          href={`https://wa.me/+923048237137`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-green-500 py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
+        >
+          Ping Me on WhatsApp
 
-</a>
-        </div>
+        </a>
+      </div>
       <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center gap-10">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
 
-        
+
       </div>
     </>
   );

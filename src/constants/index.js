@@ -42,13 +42,14 @@ import {
   devfor,
   trektooicon,
   laundaryday,
-  // github,
   laravel,
   php,
   nextjs,
   casewise,
   python,
   casewiselogo,
+  trektooProject,
+  webIcon,
 } from '../assets'
 
 
@@ -76,19 +77,19 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Full-Stack Web Developer (Laravel & React)",
+    title: "Team Lead (Web & Mobile App)",
     icon: web,
   },
   {
-    title: "AI Chatbot & NLP Developer (Python)",
+    title: "Full Stack Solution Architect",
     icon: mobile,
   },
   {
-    title: "Backend Architect & API Developer",
+    title: "Backend Architect (Laravel & API)",
     icon: backend,
   },
   {
-    title: "Relational Database Designer (MySQL)",
+    title: "Custom SaaS & ERP Developer",
     icon: creator,
   },
 ];
@@ -157,27 +158,42 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Project Manager & Full Stack Developer",
-    company_name: "Devloop Technologies",
-  icon: devloops,
-      iconBg: "#383E56",
-    date: "Feb 2025 - Present",
+    title: "Full Stack Developer",
+    company_name: "Enscyd Technologies",
+    icon: web,
+    iconBg: "#383E56",
+    date: "Jul 2025 - Present",
+    type: "full-time",
     points: [
-      "Leading Laravel-based SaaS and enterprise application projects.",
-      "Managing teams for HRM systems, dashboards, and subscriptions.",
-      "Implementing scalable backend architecture and payment gateways.",
+      "Designing and developing scalable web and mobile products.",
+      "Implementing high-performance backend systems and clean UI components.",
+      "Collaborating on system architecture and product strategy.",
     ],
   },
   {
-    title: "Full Stack Developer",
+    title: "CTO & Team Lead",
     company_name: "Trektoo",
-    icon: trektooicon || "TK", // fallback to initials
+    icon: trektooicon || "TK",
     iconBg: "#E6DEDD",
     date: "Apr 2025 - Present",
+    type: "remote",
     points: [
-      "Built travel platform with React, Next.js, and Laravel.",
-      "Developed SEO-friendly interfaces and booking flows.",
-      "Collaborated with Mahmood Ahmad and team.",
+      "Managing the development team and focusing on company-wide growth.",
+      "Architected and built the project from scratch with a dedicated development team.",
+      "Leading the upgrading and scaling of the business into its next levels through advanced technical solutions.",
+    ],
+  },
+  {
+    title: "Project Manager & Full Stack Developer",
+    company_name: "Devloop Technologies",
+    icon: devloops,
+    iconBg: "#383E56",
+    date: "Feb 2025 - Jul 2025",
+    type: "full-time",
+    points: [
+      "Led Laravel-based SaaS and enterprise application projects.",
+      "Managed teams for HRM systems, dashboards, and subscriptions.",
+      "Implemented scalable backend architecture and payment gateways.",
     ],
   },
   {
@@ -185,44 +201,46 @@ const experiences = [
     company_name: "LaundryDay",
     icon: laundaryday || "LD",
     iconBg: "#F0F0F0",
-    date: "Jan 2025 - Present",
+    date: "Jan 2025 - Jul 2025",
+    type: "remote",
     points: [
       "Created Laravel-based admin panel for laundry logistics.",
       "Integrated real-time tracking with Google Maps.",
-      "Worked with Suleman Abrar on service forms and timing.",
+      "Worked on service forms and vendor management.",
     ],
   },
   {
-title: "Full Stack Developer",
+    title: "Full Stack Developer",
     company_name: "Casewise (FYP)",
     icon: casewiselogo || "TK",
     iconBg: "#E6DEDD",
     date: "Jan 2025 - Present",
+    type: "remote",
     points: [
-     "Developing AI-powered legal services platform using React.js and Laravel.",
-    "Integrated TF-IDF + Naive Bayes law matcher and chatbot using Python Flask.",
-    "Implemented role-based access, lawyer/case modules, scheduling, and law filtering.",
+      "Developing AI-powered legal services platform using React.js and Laravel.",
+      "Integrated TF-IDF + Naive Bayes law matcher and chatbot using Python Flask.",
+      "Implemented role-based access and Law filtering.",
     ],
   },
- 
- {
+  {
     title: "Full Stack Developer",
     company_name: "Devfor",
     icon: devfor || "DF",
     iconBg: "#E6DEDD",
-    date: "Dec 2024 -  Jan 2025",
+    date: "Dec 2024 - Jan 2025",
+    type: "full-time",
     points: [
       "Developed dynamic Laravel modules for business applications.",
       "Built dashboards, APIs, and authentication flows.",
-      "Worked closely with clients to build custom solutions.",
     ],
   },
-    {
+  {
     title: "Full Stack Developer Intern",
     company_name: "Mighty Media Technologies, RYK",
     icon: mightymedia,
     iconBg: "#DDEEFF",
     date: "Sept 2024 – Oct 2024",
+    type: "full-time",
     points: [
       "Worked on frontend components using Blade and Tailwind.",
       "Assisted in building admin panels and integrating Laravel APIs.",
@@ -234,9 +252,36 @@ title: "Full Stack Developer",
     icon: itwork,
     iconBg: "#FFEFDD",
     date: "Apr 2024 – Aug 2024",
+    type: "full-time",
     points: [
       "Learned core concepts of PHP, Laravel, and MVC architecture.",
       "Built small web applications under mentorship.",
+    ],
+  },
+  {
+    title: "Freelancing & Learning",
+    company_name: "Self-Employed",
+    icon: creator,
+    iconBg: "#E6DEDD",
+    date: "Aug 2022 - Apr 2024",
+    type: "remote",
+    points: [
+      "Explored various technologies and improved full-stack skills.",
+      "Completed freelance projects for diverse clients.",
+      "Deepened knowledge in Laravel, React, and system design.",
+    ],
+  },
+  {
+    title: "Trainee Web Developer",
+    company_name: "ICR",
+    icon: web,
+    iconBg: "#383E56",
+    date: "Jul 2022 - Aug 2022",
+    type: "full-time",
+    points: [
+      "First professional experience focusing on Frontend Development.",
+      "Learned core HTML, CSS, and JavaScript principles.",
+      "Assisted in building responsive web components.",
     ],
   },
 ];
@@ -268,90 +313,171 @@ const testimonials = [
   },
 ];
 
-
 const projects = [
- {
-  name: "CaseWise AI Law Firm",
-  description:
-    "Built a smart legal assistant platform with AI chatbot integration to analyze user input, match legal sections, and suggest lawyers based on case categories.",
-  tags: [
-    { name: "laravel", color: "red-text-gradient" },
-    { name: "react", color: "blue-text-gradient" },
-    { name: "python", color: "green-text-gradient" },
-    // { name: "flask", color: "orange-text-gradient" },
-    { name: "machine-learning", color: "pink-text-gradient" },
-    { name: "mysql", color: "purple-text-gradient" },
-  ],
-  image: casewise, // Show "Image not available" in frontend
-  source_code_link: "https://github.com/", // Replace with actual link
-},
-
   {
-    name: "LaundryDay Admin Panel",
+    name: "Trektoo – Travel Booking Platform",
     description:
-      "Developed a complete laundry management system with admin and vendor roles. Features include Google Maps tracking, subscriptions, and order management.",
+      "Role: Team Lead (Web + Mobile App)\n• Led full product development (web + mobile)\n• Managed team (web + mobile developers)\n• Designed booking engine, APIs, and integrations\n• Architected scalable system",
     tags: [
+      { name: "web-mobile-app", color: "pink-text-gradient" },
+      { name: "react", color: "blue-text-gradient" },
+      { name: "nextjs", color: "orange-text-gradient" },
       { name: "laravel", color: "red-text-gradient" },
-      { name: "spatie", color: "green-text-gradient" },
-      { name: "breeze", color: "blue-text-gradient" },
-      { name: "javascript", color: "orange-text-gradient" },
-      { name: "google-maps", color: "pink-text-gradient" },
     ],
-    image: laundry, // Show "Image not available" in frontend
-    source_code_link: "https://github.com/",
+    image: "https://api.iconify.design/lucide:plane.svg?color=white",
+    live_link: "https://trektoo.com",
   },
   {
-    name: "Trektoo Hotel Booking Module",
+    name: "BannuGul – Food Delivery",
     description:
-      "Currently building a hotel booking module for Trektoo’s travel platform using Laravel and React, focusing on room listings, booking flow, filters, and availability logic.",
+      "Role: Team Lead (Web + Mobile App)\n• Built multi-vendor marketplace (restaurants)\n• Designed order & delivery lifecycle\n• Guided frontend mobile app developer",
     tags: [
+      { name: "web-mobile-app", color: "pink-text-gradient" },
       { name: "laravel", color: "red-text-gradient" },
-      { name: "reactjs", color: "blue-text-gradient" },
-            { name: "nextjs", color: "orange-text-gradient" },
+      { name: "php", color: "blue-text-gradient" },
       { name: "mysql", color: "green-text-gradient" },
     ],
-    image: trektoo, // Under development — no image
-    source_code_link: "https://github.com/",
+    image: "https://api.iconify.design/lucide:utensils.svg?color=white",
+    live_link: "#",
   },
   {
-    name: "Multi-Tenant System (Church Site)",
+    name: "LaundryDay – Management System",
     description:
-      "A multi-tenant platform for churches, offering role-based access, multiple payment gateways, and subscription-based access for different features.",
+      "Role: Team Lead (Web + Mobile App)\n• Designed APIs and database structure\n• Managed vendor, order, and delivery systems\n• Worked with frontend mobile developer",
+    tags: [
+      { name: "web-mobile-app", color: "pink-text-gradient" },
+      { name: "laravel", color: "red-text-gradient" },
+      { name: "mysql", color: "green-text-gradient" },
+      { name: "google-maps", color: "pink-text-gradient" },
+    ],
+    image: "https://api.iconify.design/lucide:washing-machine.svg?color=white",
+    live_link: "#",
+  },
+  {
+    name: "Buddy – Service Marketplace",
+    description:
+      "Role: Team Lead (Web + Mobile App)\n• Built services marketplace (home services)\n• Designed scalable backend system\n• Led mobile app flow and logic",
+    tags: [
+      { name: "web-mobile-app", color: "pink-text-gradient" },
+      { name: "laravel", color: "red-text-gradient" },
+      { name: "php", color: "blue-text-gradient" },
+      { name: "apis", color: "orange-text-gradient" },
+    ],
+    image: "https://api.iconify.design/lucide:hammer.svg?color=white",
+    live_link: "#",
+  },
+  {
+    name: "Floorlink – Labour Management",
+    description:
+      "Role: Full Stack Web Dev\n• Workforce and job assignment system\n• Order tracking and management\n• Designed backend architecture",
     tags: [
       { name: "laravel", color: "red-text-gradient" },
-      { name: "breeze", color: "blue-text-gradient" },
-      { name: "stripe", color: "green-text-gradient" },
+      { name: "mysql", color: "green-text-gradient" },
+      { name: "system-design", color: "pink-text-gradient" },
     ],
-    image: church,
-    source_code_link: "https://github.com/",
+    image: "https://api.iconify.design/lucide:hard-hat.svg?color=white",
+    live_link: "#",
   },
   {
-    name: "IT Work Center Website",
+    name: "Accounts Management System (AMS)",
     description:
-      "A complete software house and training center portal featuring student enrollment, role-based dashboards, fee management, attendance tracking, and HR salary management.",
+      "Role: Full Stack Web Dev\n• Admin + Client panels\n• Invoicing, billing, revenue/expense tracking\n• Python-based PDF generation (multi-theme)",
+    tags: [
+      { name: "python", color: "green-text-gradient" },
+      { name: "laravel", color: "red-text-gradient" },
+      { name: "mysql", color: "blue-text-gradient" },
+      { name: "pdf-generation", color: "pink-text-gradient" },
+    ],
+    image: "https://api.iconify.design/lucide:calculator.svg?color=white",
+    live_link: "#",
+  },
+  {
+    name: "Energy Billing System",
+    description:
+      "Role: Full Stack Web Dev\n• Electricity & gas billing system\n• Admin, staff, and customer portals\n• Meter reading & bill generation",
     tags: [
       { name: "laravel", color: "red-text-gradient" },
       { name: "php", color: "blue-text-gradient" },
       { name: "mysql", color: "green-text-gradient" },
     ],
-    image: itworkcenter,
-    source_code_link: "https://github.com/",
+    image: "https://api.iconify.design/lucide:zap.svg?color=white",
+    live_link: "#",
+  },
+  {
+    name: "Axis Properties – Real Estate",
+    description:
+      "Role: Full Stack Web Dev\n• Property listing & inventory management\n• Advanced filtering (location, price, type)\n• Admin panel for listings and clients",
+    tags: [
+      { name: "laravel", color: "red-text-gradient" },
+      { name: "react", color: "blue-text-gradient" },
+      { name: "mysql", color: "green-text-gradient" },
+    ],
+    image: "https://api.iconify.design/lucide:home.svg?color=white",
+    live_link: "#",
+  },
+  {
+    name: "Ecommerce Platforms",
+    description:
+      "Role: Full Stack Web Dev\n• Built multiple ecommerce platforms (Claudia & Rathore)\n• Payment, inventory, and order management",
+    tags: [
+      { name: "laravel", color: "red-text-gradient" },
+      { name: "payment-gateways", color: "green-text-gradient" },
+      { name: "mysql", color: "blue-text-gradient" },
+    ],
+    image: "https://api.iconify.design/lucide:shopping-bag.svg?color=white",
+    live_link: "#",
+  },
+  {
+    name: "YumGrills – RMS",
+    description:
+      "Role: Full Stack Web Dev\n• Single vendor restaurant management system\n• Order and delivery management\n• Real-time order tracking",
+    tags: [
+      { name: "laravel", color: "red-text-gradient" },
+      { name: "php", color: "blue-text-gradient" },
+      { name: "mysql", color: "green-text-gradient" },
+    ],
+    image: "https://api.iconify.design/lucide:flame.svg?color=white",
+    live_link: "#",
+  },
+  {
+    name: "IT Work Center – Training & HR",
+    description:
+      "Role: Full Stack Web Dev\n• Student enrollment and fee management\n• HR, attendance, and payroll system",
+    tags: [
+      { name: "laravel", color: "red-text-gradient" },
+      { name: "php", color: "blue-text-gradient" },
+      { name: "mysql", color: "green-text-gradient" },
+    ],
+    image: "https://api.iconify.design/lucide:graduation-cap.svg?color=white",
+    live_link: "#",
   },
   {
     name: "HRM System (Devfor)",
     description:
-      "An internal HRM solution with leave management, salary calculation, attendance (check-in/check-out), and employee detail management developed during Devfor employment.",
+      "Role: Full Stack Web Dev\n• Employee management system\n• Attendance, leave, and salary tracking\n• Automated payroll generation",
     tags: [
       { name: "laravel", color: "red-text-gradient" },
-      { name: "bootstrap", color: "blue-text-gradient" },
-            { name: "mysql", color: "green-text-gradient" },
-      { name: "filament", color: "orange-text-gradient" },
-
+      { name: "mysql", color: "green-text-gradient" },
+      { name: "hrm", color: "blue-text-gradient" },
     ],
-    image: hrm,
-    source_code_link: "https://github.com/",
+    image: "https://api.iconify.design/lucide:users.svg?color=white",
+    live_link: "#",
   },
- 
+
+  {
+    name: "CaseWise – AI-Based Law Firm",
+    description:
+      "Role: Full Stack + AI Integration\n• ML-based legal chatbot & recommendation system\n• Pakistani law dataset integration\n• Case & hearing management",
+    tags: [
+      { name: "python", color: "green-text-gradient" },
+      { name: "ml", color: "pink-text-gradient" },
+      { name: "react", color: "blue-text-gradient" },
+      { name: "laravel", color: "red-text-gradient" },
+    ],
+    image: "https://api.iconify.design/lucide:gavel.svg?color=white",
+    live_link: "#",
+    badge: "University Project",
+  },
 ];
 
 
