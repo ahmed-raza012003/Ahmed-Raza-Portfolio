@@ -12,31 +12,30 @@ import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
 
-const ExperienceCard = ({ experience }) => {
+const ExperienceCard = ({ experience, isRemote = false }) => {
   return (
     <VerticalTimelineElement
       contentStyle={{
-        background: "#1d1836",
+        background: isRemote ? "#050816" : "#1d1836", // darker for remote/innovation
         color: "#fff",
+        boxShadow: isRemote ? "0 0 10px rgba(0, 212, 255, 0.2)" : "none", // subtle blue glow for remote
+        border: isRemote ? "1px solid #111827" : "none",
       }}
-      contentArrowStyle={{ borderRight: "7px solid  #232631" }}
+      contentArrowStyle={{ borderRight: isRemote ? "7px solid #050816" : "7px solid #232631" }}
       date={experience.date}
       iconStyle={{ background: experience.iconBg }}
-     icon={
- <div className="flex justify-center items-center w-full h-full">
-  <img
-    src={experience.icon}
-    alt={experience.company_name}
-    className="w-[90%] h-[90%] object-contain"
-    style={{ borderRadius: "50%" }}
-    onError={(e) => {
-      console.error(`Failed to load image: ${experience.icon}`);
-      e.target.src = "https://via.placeholder.com/48"; // Fallback image
-    }}
-  />
-</div>
-}
-
+      icon={
+        <div className="flex justify-center items-center w-full h-full">
+          <img
+            src={experience.icon}
+            alt={experience.company_name}
+            className="w-[90%] h-[90%] object-contain rounded-full"
+            onError={(e) => {
+              e.target.src = "https://via.placeholder.com/48";
+            }}
+          />
+        </div>
+      }
     >
       <div>
         <h3 className='text-white text-[24px] font-bold'>{experience.title}</h3>
@@ -81,32 +80,38 @@ const Experience = () => {
         </h2>
       </motion.div>
 
-      <div className='mt-20 flex flex-col'>
-        <h3 className='text-white text-[30px] font-bold text-center mb-10'>
-          Full-Time Roles
-        </h3>
-        <VerticalTimeline>
-          {fullTimeExperiences.map((experience, index) => (
-            <ExperienceCard
-              key={`full-time-experience-${index}`}
-              experience={experience}
-            />
-          ))}
-        </VerticalTimeline>
-      </div>
+      <div className='mt-20 grid lg:grid-cols-2 grid-cols-1 gap-10 items-start'>
+        {/* Full-Time Section */}
+        <div className='flex flex-col'>
+          <h3 className='text-white text-[28px] font-bold text-center mb-10 tracking-widest uppercase'>
+            Professional Core
+          </h3>
+          <VerticalTimeline layout="1-column-left">
+            {fullTimeExperiences.map((experience, index) => (
+              <ExperienceCard
+                key={`full-time-experience-${index}`}
+                experience={experience}
+                isRemote={false}
+              />
+            ))}
+          </VerticalTimeline>
+        </div>
 
-      <div className='mt-20 flex flex-col'>
-        <h3 className='text-white text-[30px] font-bold text-center mb-10'>
-          Remote & Part-Time Projects
-        </h3>
-        <VerticalTimeline>
-          {remoteExperiences.map((experience, index) => (
-            <ExperienceCard
-              key={`remote-experience-${index}`}
-              experience={experience}
-            />
-          ))}
-        </VerticalTimeline>
+        {/* Remote/Projects Section */}
+        <div className='flex flex-col'>
+          <h3 className='text-white text-[28px] font-bold text-center mb-10 tracking-widest uppercase'>
+            Innovation & Growth (Remote)
+          </h3>
+          <VerticalTimeline layout="1-column-left">
+            {remoteExperiences.map((experience, index) => (
+              <ExperienceCard
+                key={`remote-experience-${index}`}
+                experience={experience}
+                isRemote={true}
+              />
+            ))}
+          </VerticalTimeline>
+        </div>
       </div>
     </>
   );

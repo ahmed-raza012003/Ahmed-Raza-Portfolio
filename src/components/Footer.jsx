@@ -16,7 +16,7 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-2">About Me</h3>
           <p>
-           I'm Ahmad, a Full Stack Developer turning complex ideas into smart, scalable digital solutions. I don’t just code — I bend computers to my will.
+            I am Ahmad, a Full Stack Developer and Technical Lead specializing in building scalable, high-performance digital solutions and leading development teams to solve real business problems.
           </p>
         </div>
 
